@@ -10,7 +10,7 @@ public class ButtonEvents {
 	static void showChooseOperationUI()
 	{
 		JFrame frame = new JFrame();
-	    chooseOperationUI jp = new chooseOperationUI();
+	    ChooseOperationUI jp = new ChooseOperationUI();
 	    frame.add(jp.jpChooseOperationUI);
 	    frame.pack();
 	    frame.setSize(350, 250);

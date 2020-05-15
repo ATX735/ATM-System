@@ -8,7 +8,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class chooseOperationUI {
+public class ChooseOperationUI {
 	//panel
 	public Box jpChooseOperationUI = Box.createVerticalBox();
 	
@@ -19,7 +19,7 @@ public class chooseOperationUI {
 	private JButton jbtModifyPassword = new JButton("ModifyPassword");
 	private JButton jbtCheckBalance = new JButton("CheckBalance");
 	
-	public chooseOperationUI() {
+	public ChooseOperationUI() {
 		JPanel jpDeposit = new JPanel();
 		jpDeposit.add(jbtDeposit);
 		jpChooseOperationUI.add(jpDeposit);

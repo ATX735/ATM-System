@@ -8,7 +8,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class loginUI extends JFrame {
+public class LoginUI extends JFrame {
 	//panel
 	JPanel jpLoginUI = new JPanel();
 	
@@ -20,7 +20,7 @@ public class loginUI extends JFrame {
 	private JButton jbtEnter = new JButton("Enter");
 	private JButton jbtCancel = new JButton("Cancel");
 
-	public loginUI() {
+	public LoginUI() {
 		// Panel p1 for holding labels "Account", "password"
 		JPanel p1 = new JPanel();
 		p1.setLayout(new GridLayout(2, 1));
@@ -81,7 +81,7 @@ public class loginUI extends JFrame {
 
 	public static void main(String[] args) {
 	    JFrame frame = new JFrame();
-	    loginUI jp = new loginUI();
+	    LoginUI jp = new LoginUI();
 	    frame.add(jp.jpLoginUI);
 	    frame.pack();
 	    frame.setSize(350, 150);
