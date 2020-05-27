@@ -7,11 +7,16 @@ package systemUI;
 import javax.swing.JFrame;
 
 public class ButtonEvents {
+	static void backToMenu()
+	{
+		showChooseOperationUI();
+	}
+	
 	static void showChooseOperationUI()
 	{
 		JFrame frame = new JFrame();
 	    ChooseOperationUI jp = new ChooseOperationUI();
-	    frame.add(jp.jpChooseOperationUI);
+	    frame.add(jp.getChooseOperationUI());
 	    frame.pack();
 	    frame.setSize(350, 250);
 	    frame.setTitle("ATMsystem");
@@ -19,5 +24,15 @@ public class ButtonEvents {
 	    frame.setVisible(true);
 	}
 	
-	
+	static void showDepositUI()
+	{
+		JFrame frame = new JFrame();
+	    DepositUI jp = new DepositUI();
+	    frame.add(jp.getDepositUI());
+	    frame.pack();
+	    frame.setSize(350, 250);
+	    frame.setTitle("ATMsystem");
+	    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	    frame.setVisible(true);
+	}
 }

@@ -10,7 +10,7 @@ import javax.swing.*;
 
 public class ChooseOperationUI {
 	//panel
-	public Box jpChooseOperationUI = Box.createVerticalBox();
+	private Box jpChooseOperationUI = Box.createVerticalBox();
 	
 	//buttons
 	private JButton jbtDeposit = new JButton("Deposit");
@@ -43,52 +43,48 @@ public class ChooseOperationUI {
 		//按钮触发事件
 		jbtDeposit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				// 切换到存款界面
-				
+				//切换到存款界面
+				ButtonEvents.showDepositUI();
 			}
 		});
 		
 		jbtWithdraw.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				// 切换到取款界面
+				//to do
+				//切换到取款界面
 				
 			}
 		});
 		
 		jbtTransfer.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				// 切换到转账界面
+				//to do
+				//切换到转账界面
 				
 			}
 		});
 		
 		jbtModifyPassword.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				// 切换到修改密码界面
+				//to do
+				//切换到修改密码界面
 				
 			}
 		});
 		
 		jbtCheckBalance.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				// 切换到查询余额界面
+				//to do
+				//切换到查询余额界面
 				
 			}
 		});
 	}
 	
-/*
-	public static void main(String[] args) {
-	    JFrame frame = new JFrame();
-	    chooseOperationUI jp = new chooseOperationUI();
-	    frame.add(jp.jpChooseOperationUI);
-	    frame.pack();
-	    frame.setSize(350, 250);
-	    frame.setTitle("ATMsystem");
-	    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	    frame.setVisible(true);
+	public Box getChooseOperationUI()
+	{
+		return jpChooseOperationUI;
 	}
-*/
 }
 
 

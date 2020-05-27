@@ -10,7 +10,7 @@ import javax.swing.*;
 
 public class LoginUI extends JFrame {
 	//panel
-	JPanel jpLoginUI = new JPanel();
+	private JPanel jpLoginUI = new JPanel();
 	
 	// Text fields
 	private JTextField jtfAccount = new JTextField();
@@ -56,38 +56,28 @@ public class LoginUI extends JFrame {
 		jpLoginUI.setLayout(new BorderLayout());
 		jpLoginUI.add(jpLogin, BorderLayout.CENTER);
 		jpLoginUI.add(jpButton, BorderLayout.SOUTH);
-    
-		// Add jpAddress and jpButton to the frame
-		//add(jpLoginUI, BorderLayout.CENTER);
-		//add(jpButton, BorderLayout.SOUTH);
 
 		//按钮触发事件
 		jbtEnter.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//载入chooseOperationUI
+				//to do
+				//与银行数据库通信，检查账号密码是否有误
+				
+				//若账号密码正确，则载入chooseOperationUI
 				ButtonEvents.showChooseOperationUI();
 			}
 		});
     
 		jbtCancel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//关闭当前窗口
+				//退出程序
 				System.exit(ABORT);
 			}	
 		});
-    
 	}
 	
-
-	public static void main(String[] args) {
-	    JFrame frame = new JFrame();
-	    LoginUI jp = new LoginUI();
-	    frame.add(jp.jpLoginUI);
-	    frame.pack();
-	    frame.setSize(350, 150);
-	    frame.setTitle("ATMsystem");
-	    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	    frame.setVisible(true);
+	public JPanel getLoginUI()
+	{
+		return jpLoginUI;
 	}
-
 }
