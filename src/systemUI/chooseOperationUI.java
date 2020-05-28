@@ -1,5 +1,5 @@
 //*************
-//选择操作界面
+//閫夋嫨鎿嶄綔鐣岄潰
 //*************
 
 package systemUI;
@@ -40,17 +40,17 @@ public class ChooseOperationUI {
 		jpCheckBalance.add(jbtCheckBalance);
 		jpChooseOperationUI.add(jpCheckBalance);
 		
-		//按钮触发事件
+		//锟斤拷钮锟斤拷锟斤拷锟铰硷拷
 		jbtDeposit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//切换到存款界面
+				//鎵撳紑瀛樻鐣岄潰
 				ButtonEvents.showDepositUI();
 			}
 		});
 		
 		jbtWithdraw.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//切换到取款界面
+				//鎵撳紑鍙栨鐣岄潰
 				ButtonEvents.showWithdrawUI();
 				
 			}
@@ -59,7 +59,7 @@ public class ChooseOperationUI {
 		jbtTransfer.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				//to do
-				//切换到转账界面
+				//鎵撳紑杞处鐣岄潰
 				
 			}
 		});
@@ -67,7 +67,7 @@ public class ChooseOperationUI {
 		jbtModifyPassword.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				//to do
-				//切换到修改密码界面
+				//鎵撳紑淇敼瀵嗙爜鐣岄潰
 				
 			}
 		});
@@ -75,7 +75,7 @@ public class ChooseOperationUI {
 		jbtCheckBalance.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				//to do
-				//切换到查询余额界面
+				//鎵撳紑鏌ヨ浣欓鐣岄潰
 				
 			}
 		});

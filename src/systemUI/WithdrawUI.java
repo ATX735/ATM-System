@@ -1,5 +1,5 @@
 //*********
-//È¡¿î½çÃæ
+//È¡ï¿½ï¿½ï¿½ï¿½ï¿½
 //*********
 
 package systemUI;
@@ -12,15 +12,15 @@ public class WithdrawUI {
 	//panel
 	private JPanel jpWithdrawUI = new JPanel();
 	
-	//ÓÃÓÚ¼ÇÂ¼È¡³öÏÖ½ğµÄ±äÁ¿
+	//ç”¨äºè®°å½•è¦å–å‡ºçš„é‡‘é¢
 	private int withdrawAmount = 0;
 	
-	//ÊäÈë¿ò
-	JLabel jlInput = new JLabel("ÇëÊäÈëÒªÈ¡ÏÖ½ğµÄÊıÁ¿£º");
+	//å–æ¬¾é‡‘é¢è¾“å…¥æ¡†
+	JLabel jlInput = new JLabel("è¯·è¾“å…¥è¦å–å‡ºçš„é‡‘é¢ï¼š");
 	JTextField jtfAmount = new JTextField(8);
 	JPanel jpInput = new JPanel();
 	
-	//ÓÃÓÚÏÔÊ¾¸÷ÖÖÌáÊ¾ĞÅÏ¢µÄ±êÇ©
+	//ç”¨äºæ˜¾ç¤ºæç¤ºä¿¡æ¯
 	JLabel jlMessage = new JLabel();
 	JPanel jpMessage = new JPanel();
 	
@@ -44,24 +44,24 @@ public class WithdrawUI {
 		jpButtons.add(jbtCancel);
 		jpWithdrawUI.add(jpButtons, BorderLayout.SOUTH);
 		
-		//°´Å¥´¥·¢ÊÂ¼ş
-		//Enter°´Å¥
+		//æŒ‰é’®è§¦å‘äº‹ä»¶
+		//EnteræŒ‰é’®
 		jbtEnter.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//»ñÈ¡ÎÄ±¾¿òÖĞµÄÄÚÈİ£¬²¢¸³Öµ¸øwithdrawAmount
+				//è·å–è¾“å…¥æ¡†ä¸­çš„æ•°å­—ï¼Œå¹¶èµ‹å€¼ç»™withdrawAmount
 				withdrawAmount = Integer.parseInt( jtfAmount.getText() );
 				
 				//to do
-				//ÓëÒøĞĞÊı¾İ¿âÍ¨ĞÅ£¬ÅĞ¶ÏÕË»§Óà¶îÊÇ·ñ×ã¹»
-				//Èô×ã¹»ÔòÍê³ÉÈ¡¿î²¢ĞŞ¸ÄÕË»§Óà¶î
+				//ä¸é“¶è¡Œæ•°æ®åº“é€šä¿¡ï¼Œåˆ¤æ–­å–æ¬¾é‡‘é¢æ˜¯å¦å¤§äºä½™é¢
+				//è‹¥ä¸å¤§äºä½™é¢ï¼Œåˆ™å®Œæˆå–æ¬¾æ“ä½œ
 				jpWithdrawUI.remove(jpInput);
-				jlMessage.setText("È¡¿îÒÑÍê³É£¬Çë°´Cancel°´Å¥»Øµ½Ö÷½çÃæ");
+				jlMessage.setText("å–æ¬¾å·²å®Œæˆï¼Œè¯·æŒ‰cancelæŒ‰é’®å›åˆ°èœå•ç•Œé¢");
 				jpWithdrawUI.add(jpMessage, BorderLayout.CENTER);
 				jpWithdrawUI.revalidate();
 			}
 		});
 		
-		//Cancel°´Å¥
+		//CancelæŒ‰é’®
 		jbtCancel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				ButtonEvents.backToMenu();

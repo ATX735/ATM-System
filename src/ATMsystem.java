@@ -1,5 +1,5 @@
 //***********
-//ATM系统入口
+//ATM绯荤粺鍏ュ彛
 //***********
 
 import javax.swing.JFrame;

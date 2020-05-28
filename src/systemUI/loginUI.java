@@ -1,5 +1,5 @@
 //***********
-//µÇÂ¼½çÃæ
+//ç™»é™†ç•Œé¢
 //***********
 
 package systemUI;
@@ -57,20 +57,20 @@ public class LoginUI extends JFrame {
 		jpLoginUI.add(jpLogin, BorderLayout.CENTER);
 		jpLoginUI.add(jpButton, BorderLayout.SOUTH);
 
-		//°´Å¥´¥·¢ÊÂ¼ş
+		//æŒ‰é’®è§¦å‘äº‹ä»¶
 		jbtEnter.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				//to do
-				//ÓëÒøĞĞÊı¾İ¿âÍ¨ĞÅ£¬¼ì²éÕËºÅÃÜÂëÊÇ·ñÓĞÎó
+				//ä¸é“¶è¡Œæ•°æ®åº“é€šä¿¡ï¼Œåˆ¤æ–­è´¦å·å¯†ç æ˜¯å¦æœ‰è¯¯
 				
-				//ÈôÕËºÅÃÜÂëÕıÈ·£¬ÔòÔØÈëchooseOperationUI
+				//è‹¥è´¦å·å¯†ç æ­£ç¡®åˆ™æ‰“å¼€é€‰æ‹©æ“ä½œç•Œé¢
 				ButtonEvents.showChooseOperationUI();
 			}
 		});
     
 		jbtCancel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//ÍË³ö³ÌĞò
+				//é€€å‡ºç¨‹åº
 				System.exit(ABORT);
 			}	
 		});

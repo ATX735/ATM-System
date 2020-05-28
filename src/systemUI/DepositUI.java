@@ -1,5 +1,5 @@
 //***********
-//´æ¿î½çÃæ
+//å­˜æ¬¾ç•Œé¢
 //***********
 
 package systemUI;
@@ -12,11 +12,11 @@ public class DepositUI {
 	//panel
 	private JPanel jpDepositUI = new JPanel();
 	
-	//ÓÃÓÚ¼ÇÂ¼´æÈëÏÖ½ğµÄ±äÁ¿
+	//ç”¨äºè®°å½•å­˜å…¥ç°é‡‘çš„æ•°é¢
 	private int depositAmount = 0;
 	
-	//ÓÃÓÚÏÔÊ¾¸÷ÖÖÌáÊ¾ĞÅÏ¢µÄ±êÇ©
-	String message = "Çë·ÅÈëÏÖ½ğ";
+	//ç”¨äºæ˜¾ç¤ºæç¤ºä¿¡æ¯
+	String message = "è¯·æ”¾å…¥ç°é‡‘";
 	JLabel jlMessage = new JLabel(message);
 	JPanel jpMessage = new JPanel();
 	
@@ -40,35 +40,35 @@ public class DepositUI {
 		jpButtons.add(jbtCancel);
 		jpDepositUI.add(jpButtons, BorderLayout.SOUTH);
 		
-		//°´Å¥´¥·¢ÊÂ¼ş
-		//Enter°´Å¥
+		//æŒ‰é’®è§¦å‘äº‹ä»¶
+		//EnteræŒ‰é’®
 		ActionListener enterAction = new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				depositAmount += (int)(Math.random() * 10 + 1) * 100;
-				message = "ÒÑ·ÅÈë½ğ¶î£º" + depositAmount;
+				message = "å·²æ”¾å…¥é‡‘é¢ï¼š" + depositAmount;
 				jlMessage.setText(message);
 				jbtEnter.setText("Continue");
-				jpDepositUI.revalidate();   //Ë¢ĞÂÒ³Ãæ
+				jpDepositUI.revalidate();   //Ë¢ï¿½ï¿½Ò³ï¿½ï¿½
 			}
 		};
 		jbtEnter.addActionListener(enterAction);
 		
-		//Finish°´Å¥
+		//FinishæŒ‰é’®
 		jbtFinish.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				message = "´æ¿îÒÑÍê³É£¬Çë°´Cancel°´Å¥»Øµ½Ö÷½çÃæ";
+				message = "å­˜æ¬¾å·²å®Œæˆï¼Œè¯·æŒ‰cancelæŒ‰é’®å›åˆ°èœå•ç•Œé¢";
 				jlMessage.setText(message);
 				jpDepositUI.revalidate();
 				
-				//Ñ¡ÔñFinishºó½ûÓÃEnter°´Å¥µÄ²Ù×÷
+				//ç¦ç”¨EnteræŒ‰é’®çš„äº‹ä»¶
 				jbtEnter.removeActionListener(enterAction);
 				
 				//to do
-				//ÓëÒøĞĞÊı¾İ¿âÍ¨ĞÅ£¬ĞŞ¸ÄÕË»§Óà¶î
+				//ä¸é“¶è¡Œæ•°æ®åº“é€šä¿¡ï¼Œä¿®æ”¹è´¦æˆ·ä½™é¢
 			}
 		});
 		
-		//Cancel°´Å¥
+		//CancelæŒ‰é’®
 		jbtCancel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				ButtonEvents.backToMenu();
