@@ -35,4 +35,16 @@ public class ButtonEvents {
 	    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	    frame.setVisible(true);
 	}
+	
+	static void showWithdrawUI()
+	{
+		JFrame frame = new JFrame();
+	    WithdrawUI jp = new WithdrawUI();
+	    frame.add(jp.getWithdrawUI());
+	    frame.pack();
+	    frame.setSize(350, 250);
+	    frame.setTitle("ATMsystem");
+	    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	    frame.setVisible(true);
+	}
 }

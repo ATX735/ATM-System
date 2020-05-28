@@ -13,16 +13,18 @@ public class DepositUI {
 	private JPanel jpDepositUI = new JPanel();
 	
 	//用于记录存入现金的变量
-	private int cashAmount = 0;
+	private int depositAmount = 0;
 	
-	//text
-	String text = "请放入现金";
-	JLabel jlText = new JLabel(text);
+	//用于显示各种提示信息的标签
+	String message = "请放入现金";
+	JLabel jlMessage = new JLabel(message);
+	JPanel jpMessage = new JPanel();
 	
 	//buttons
 	private JButton jbtEnter = new JButton("Enter");
 	private JButton jbtFinish = new JButton("Finish");
 	private JButton jbtCancel = new JButton("Cancel");
+	JPanel jpButtons = new JPanel();
 	
 	public DepositUI()
 	{
@@ -30,11 +32,9 @@ public class DepositUI {
 		
 		jpDepositUI.add(new JPanel(), BorderLayout.NORTH);
 		
-		JPanel jpText = new JPanel();
-		jpText.add(jlText);
-		jpDepositUI.add(jpText, BorderLayout.CENTER);
+		jpMessage.add(jlMessage);
+		jpDepositUI.add(jpMessage, BorderLayout.CENTER);
 		
-		JPanel jpButtons = new JPanel();
 		jpButtons.add(jbtEnter);
 		jpButtons.add(jbtFinish);
 		jpButtons.add(jbtCancel);
@@ -44,9 +44,10 @@ public class DepositUI {
 		//Enter按钮
 		ActionListener enterAction = new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				cashAmount += (int)(Math.random() * 10 + 1) * 100;
-				text = "已放入金额：" + cashAmount;
-				jlText.setText(text);
+				depositAmount += (int)(Math.random() * 10 + 1) * 100;
+				message = "已放入金额：" + depositAmount;
+				jlMessage.setText(message);
+				jbtEnter.setText("Continue");
 				jpDepositUI.revalidate();   //刷新页面
 			}
 		};
@@ -55,15 +56,15 @@ public class DepositUI {
 		//Finish按钮
 		jbtFinish.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				text = "存款已完成，请按Cancel按钮回到主界面";
-				jlText.setText(text);
+				message = "存款已完成，请按Cancel按钮回到主界面";
+				jlMessage.setText(message);
 				jpDepositUI.revalidate();
 				
 				//选择Finish后禁用Enter按钮的操作
 				jbtEnter.removeActionListener(enterAction);
 				
 				//to do
-				//与银行系统通信，修改账户余额
+				//与银行数据库通信，修改账户余额
 			}
 		});
 		

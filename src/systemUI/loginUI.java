@@ -17,7 +17,7 @@ public class LoginUI extends JFrame {
 	private JPasswordField jtfPassword = new JPasswordField();
 
 	// Buttons
-	private JButton jbtEnter = new JButton("Enter");
+	private JButton jbtEnter = new JButton("Login");
 	private JButton jbtCancel = new JButton("Cancel");
 
 	public LoginUI() {

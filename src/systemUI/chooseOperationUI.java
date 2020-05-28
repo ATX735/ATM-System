@@ -50,8 +50,8 @@ public class ChooseOperationUI {
 		
 		jbtWithdraw.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//to do
 				//切换到取款界面
+				ButtonEvents.showWithdrawUI();
 				
 			}
 		});
