@@ -12,6 +12,10 @@ public class LoginUI extends JFrame {
 	//panel
 	private JPanel jpLoginUI = new JPanel();
 	
+	//用于记录当次交易客户的账号密码
+	static String account;
+	static String password;
+	
 	// Text fields
 	private JTextField jtfAccount = new JTextField();
 	private JPasswordField jtfPassword = new JPasswordField();
@@ -60,6 +64,10 @@ public class LoginUI extends JFrame {
 		//按钮触发事件
 		jbtEnter.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				//获取输入的账号密码
+				account = jtfAccount.getText();
+				password = new String(jtfPassword.getPassword());
+				
 				//to do
 				//与银行数据库通信，判断账号密码是否有误
 				
@@ -79,5 +87,15 @@ public class LoginUI extends JFrame {
 	public JPanel getLoginUI()
 	{
 		return jpLoginUI;
+	}
+	
+	static public String getAccount()
+	{
+		return account;
+	}
+	
+	static public String getPassword()
+	{
+		return password;
 	}
 }

@@ -59,4 +59,28 @@ public class ButtonEvents {
 	    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	    frame.setVisible(true);
 	}
+	
+	static void showModifyPasswordUI()
+	{
+		JFrame frame = new JFrame();
+		ModifyPasswordUI jp = new ModifyPasswordUI();
+	    frame.add(jp.getModifyPasswordUI());
+	    frame.pack();
+	    frame.setSize(350, 250);
+	    frame.setTitle("ATMsystem");
+	    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	    frame.setVisible(true);
+	}
+	
+	static void showCheckBalanceUI()
+	{
+		JFrame frame = new JFrame();
+		CheckBalanceUI jp = new CheckBalanceUI();
+	    frame.add(jp.getCheckBalanceUI());
+	    frame.pack();
+	    frame.setSize(350, 250);
+	    frame.setTitle("ATMsystem");
+	    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	    frame.setVisible(true);
+	}
 }

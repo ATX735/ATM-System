@@ -40,7 +40,7 @@ public class ChooseOperationUI {
 		jpCheckBalance.add(jbtCheckBalance);
 		jpChooseOperationUI.add(jpCheckBalance);
 		
-		//��ť�����¼�
+		//按钮触发事件
 		jbtDeposit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				//打开存款界面
@@ -65,17 +65,15 @@ public class ChooseOperationUI {
 		
 		jbtModifyPassword.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//to do
 				//打开修改密码界面
-				
+				ButtonEvents.showModifyPasswordUI();
 			}
 		});
 		
 		jbtCheckBalance.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//to do
 				//打开查询余额界面
-				
+				ButtonEvents.showCheckBalanceUI();
 			}
 		});
 	}

@@ -53,7 +53,9 @@ public class WithdrawUI {
 				
 				//to do
 				//与银行数据库通信，判断取款金额是否大于余额
-				//若不大于余额，则完成取款操作
+				//若不大于余额，则完成取款操作，修改账户余额
+				
+				//弹出提示信息
 				jpWithdrawUI.remove(jpInput);
 				jlMessage.setText("取款已完成，请按cancel按钮回到菜单界面");
 				jpWithdrawUI.add(jpMessage, BorderLayout.CENTER);

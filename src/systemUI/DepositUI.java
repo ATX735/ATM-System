@@ -48,7 +48,7 @@ public class DepositUI {
 				message = "已放入金额：" + depositAmount;
 				jlMessage.setText(message);
 				jbtEnter.setText("Continue");
-				jpDepositUI.revalidate();   //ˢ��ҳ��
+				jpDepositUI.revalidate();
 			}
 		};
 		jbtEnter.addActionListener(enterAction);
