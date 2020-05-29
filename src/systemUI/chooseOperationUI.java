@@ -58,9 +58,8 @@ public class ChooseOperationUI {
 		
 		jbtTransfer.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//to do
 				//打开转账界面
-				
+				ButtonEvents.showTransferUI();
 			}
 		});
 		

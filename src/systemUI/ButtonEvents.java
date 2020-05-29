@@ -47,4 +47,16 @@ public class ButtonEvents {
 	    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	    frame.setVisible(true);
 	}
+	
+	static void showTransferUI()
+	{
+		JFrame frame = new JFrame();
+		TransferUI jp = new TransferUI();
+	    frame.add(jp.getTransferUI());
+	    frame.pack();
+	    frame.setSize(350, 250);
+	    frame.setTitle("ATMsystem");
+	    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	    frame.setVisible(true);
+	}
 }
